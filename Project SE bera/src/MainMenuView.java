@@ -74,9 +74,8 @@ public class MainMenuView extends JFrame {
 		panel.add(buttonPanel);
 		buttonPanel.setLayout(new GridLayout(2, 2, 0, 0));
 
-		JButton editBtn = new JButton("4");
-		/*editBtn.setHorizontalAlignment(SwingConstants.CENTER);
-		editBtn.setVerticalAlignment(SwingConstants.BOTTOM);*/
+		JButton editBtn = new JButton("แก้ไขคะแนน");
+	
 		editBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				JOptionPane.showMessageDialog(null, "Not Complete yet");
@@ -94,7 +93,7 @@ public class MainMenuView extends JFrame {
 		editBtn.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		buttonPanel.add(editBtn);
 
-		JButton showScoreBtn = new JButton("แก้ไขตาราง");
+		JButton showScoreBtn = new JButton("แสดงคะแนน");
 		ImageIcon table = new ImageIcon("table.png");
 		Image tableImg = table.getImage().getScaledInstance(50, 50, 0);
 		table = new ImageIcon(tableImg);
@@ -111,7 +110,7 @@ public class MainMenuView extends JFrame {
 		showScoreBtn.setBackground(new Color(0, 204, 153));
 		buttonPanel.add(showScoreBtn);
 
-		JButton showListBtn = new JButton("2");
+		JButton showListBtn = new JButton("แสดงรายชื่อ");
 		ImageIcon tableIcon2 = new ImageIcon("table2.png");
 		Image img2 = tableIcon2.getImage().getScaledInstance(50, 50, 0);
 		
@@ -134,7 +133,7 @@ public class MainMenuView extends JFrame {
 		showListBtn.setBackground(new Color(0, 204, 153));
 		buttonPanel.add(showListBtn);
 
-		JButton ratioEditBtn = new JButton("3");
+		JButton ratioEditBtn = new JButton("แก้ไขเกณฑ์คะแนน");
 		ratioEditBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				RatioEditView ratio = new RatioEditView();

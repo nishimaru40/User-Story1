@@ -57,7 +57,7 @@ public class RatioEditView extends JFrame {
 		
 		
 		DefaultTableModel mod = new DefaultTableModel(points,new String[]{
-			"Quiz","การบ้านย่อย","สอบกาลางภาค","สอบปลายภาค"	
+			"Quiz(%)","การบ้านย่อย(%)","สอบกาลางภาค(%)","สอบปลายภาค(%)"	
 		});
 		scrollPane.setViewportView(table);
 		table.setModel(mod);
