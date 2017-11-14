@@ -49,15 +49,15 @@ public class RatioEditView extends JFrame {
 			}
 		));
 		Object points[][] = new Object[1][4];
-		points[0][0] = PointCriteriaController.getQuiz();
-		points[0][1] = PointCriteriaController.gethomeWork();
-		points[0][2] = PointCriteriaController.getMidTest();
-		points[0][3] = PointCriteriaController.getFinalTest();
+		points[0][0] = PointCriteriaController.getQuiz()+"%";
+		points[0][1] = PointCriteriaController.gethomeWork()+"%";
+		points[0][2] = PointCriteriaController.getMidTest()+"%";
+		points[0][3] = PointCriteriaController.getFinalTest()+"%";
 		
 		
 		
 		DefaultTableModel mod = new DefaultTableModel(points,new String[]{
-			"Quiz(%)","การบ้านย่อย(%)","สอบกาลางภาค(%)","สอบปลายภาค(%)"	
+			"Quiz","การบ้านย่อย","สอบกาลางภาค","สอบปลายภาค"	
 		});
 		scrollPane.setViewportView(table);
 		table.setModel(mod);
@@ -66,10 +66,10 @@ public class RatioEditView extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				PointCriteriaController.setCriteria(Integer.parseInt(qText.getText()), Integer.parseInt(homeText.getText()), Integer.parseInt(midText.getText()), Integer.parseInt(finalText.getText()));
 				if(PointCriteriaController.isCorrect()){
-					table.setValueAt(PointCriteriaController.getQuiz(), 0, 0);
-					table.setValueAt(PointCriteriaController.gethomeWork(), 0, 1);
-					table.setValueAt(PointCriteriaController.getMidTest(), 0, 2);
-					table.setValueAt(PointCriteriaController.getFinalTest(), 0, 3);
+					table.setValueAt(PointCriteriaController.getQuiz()+"%", 0, 0);
+					table.setValueAt(PointCriteriaController.gethomeWork()+"%", 0, 1);
+					table.setValueAt(PointCriteriaController.getMidTest()+"%", 0, 2);
+					table.setValueAt(PointCriteriaController.getFinalTest()+"%", 0, 3);
 					
 				}
 				
