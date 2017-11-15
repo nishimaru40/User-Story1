@@ -9,12 +9,13 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.Color;
+import javax.swing.JPasswordField;
 
 public class LoginView extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField userField;
+	private JPasswordField passwordField;
 
 	/**
 	 * Launch the application.
@@ -45,21 +46,15 @@ public class LoginView extends JFrame {
 		setContentPane(contentPane);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(Color.WHITE);
+		panel.setBackground(new Color(204, 255, 204));
 		contentPane.add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
-		textField = new JTextField();
-		textField.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		textField.setBounds(83, 50, 245, 43);
-		panel.add(textField);
-		textField.setColumns(10);
-		
-		textField_1 = new JTextField();
-		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		textField_1.setColumns(10);
-		textField_1.setBounds(83, 104, 245, 43);
-		panel.add(textField_1);
+		userField = new JTextField();
+		userField.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		userField.setBounds(70, 50, 286, 43);
+		panel.add(userField);
+		userField.setColumns(10);
 		
 		JLabel label = new JLabel("ชื่อผู้ใช้");
 		label.setFont(new Font("Tahoma", Font.PLAIN, 16));
@@ -68,13 +63,17 @@ public class LoginView extends JFrame {
 		
 		JLabel label_1 = new JLabel("รหัสผ่าน");
 		label_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		label_1.setBounds(10, 89, 63, 29);
+		label_1.setBounds(10, 109, 63, 29);
 		panel.add(label_1);
 		
 		JButton btnNewButton = new JButton("Login");
 		btnNewButton.setBackground(new Color(0, 204, 153));
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton.setBounds(132, 172, 100, 43);
+		btnNewButton.setBounds(70, 172, 100, 43);
 		panel.add(btnNewButton);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(70, 104, 286, 43);
+		panel.add(passwordField);
 	}
 }

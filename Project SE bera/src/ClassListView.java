@@ -1,4 +1,5 @@
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -9,6 +10,7 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import java.awt.GridLayout;
 import java.util.ArrayList;
+import java.awt.FlowLayout;
 
 public class ClassListView extends JFrame {
 
@@ -28,19 +30,20 @@ public class ClassListView extends JFrame {
 		colnum = col;
 		rownum= row;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 500, 500);
+		
 		contentPane = new JPanel();
+		contentPane.setPreferredSize(new Dimension(500,500));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setLayout(null);
+		contentPane.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(5, 5, 424, 251);
+		panel.setPreferredSize(new Dimension(500, 500));
 		contentPane.add(panel);
-		panel.setLayout(null);
+		panel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(0, 0, 424, 162);
 		panel.add(scrollPane);
 		
 		table = new JTable();
